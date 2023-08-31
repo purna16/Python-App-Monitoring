@@ -1,0 +1,20 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: worker-service-monitor
+  labels:
+    release: prometheus
+    app: worker
+spec:
+  jobLabel: job
+  selector:
+    matchLabels:
+      app: worker
+  endpoints:
+    - port: web
+      path: /metrics
+      interval: 15s  # Set your desired scrape interval
+  namespaceSelector:
+    matchNames:
+      - default  # Modify to match your application's namespace
+
