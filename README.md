@@ -7,14 +7,15 @@ The responses include a simulated random delay and a 10% chance of returning an 
 **AWS Deployment**
 For deployment, I utilized AWS and Kubernetes:
 
-![Screenshot from 2023-09-01 12-32-29.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/5153d537-ae55-480d-81ea-3b6c27250d8c/1730892c-f045-4233-bf33-5d1c6d8aefe9/Screenshot_from_2023-09-01_12-32-29.png)
+![Image Alt Text](https://github.com/purna16/Jsp1/blob/main/images/Screenshot%20from%202023-09-01%2012-32-29.png)
+
 
 **Virtual Private Cloud (VPC) Setup**
 
 - Created a Virtual Private Cloud (VPC).
 - Within the VPC, established two public subnets and two private subnets across different availability zones.
 
-![Screenshot from 2023-09-01 11-59-41.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/5153d537-ae55-480d-81ea-3b6c27250d8c/e1c206c7-c52d-4800-ba32-b14a82a94773/Screenshot_from_2023-09-01_11-59-41.png)
+![Screenshot from 2023-09-01 11-59-41.png](https://github.com/purna16/Jsp1/blob/main/images/Screenshot%20from%202023-09-01%2011-59-41.png)
 
 **Bastion Host and EC2 Instances**
 
@@ -28,7 +29,7 @@ Created a Network Address Translation (NAT) gateway to facilitate private instan
 **Load Balancer**
 Attached a load balancer to the public subnet, routing traffic to both private instances using target groups.
 
-![Screenshot from 2023-09-01 12-06-04.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/5153d537-ae55-480d-81ea-3b6c27250d8c/c9660193-5ea9-46e6-b93a-d413f90ef63e/Screenshot_from_2023-09-01_12-06-04.png)
+![Screenshot from 2023-09-01 12-06-04.png](https://github.com/purna16/Jsp1/blob/main/images/Screenshot%20from%202023-09-01%2012-06-04.png)
 
 **Kubernetes and Docker**
 
@@ -95,7 +96,7 @@ helm install grafana grafana/grafana
 
 ****Configured ServiceMonitor for Prometheus****
 
-![Screenshot from 2023-09-01 12-27-29.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/5153d537-ae55-480d-81ea-3b6c27250d8c/e01fb635-ff3c-4ebe-9d32-12d46544fcfe/Screenshot_from_2023-09-01_12-27-29.png)
+![Screenshot from 2023-09-01 12-27-29.png](https://github.com/purna16/Jsp1/blob/main/images/Screenshot%20from%202023-09-01%2012-27-29.png)
 
 • Configured a ServiceMonitor for Prometheus to scrape metrics from the web application.
 
@@ -127,7 +128,7 @@ spec:
 
 **Grafana dashboard after fetching metrics from prometheus datasource**
 
-![Screenshot from 2023-09-01 14-06-03.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/5153d537-ae55-480d-81ea-3b6c27250d8c/76d5a59e-3fa9-471c-9af4-24bfb6e7cde8/Screenshot_from_2023-09-01_14-06-03.png)
+![Screenshot from 2023-09-01 14-06-03.png](https://github.com/purna16/Jsp1/blob/main/images/Screenshot%20from%202023-09-01%2014-06-03.png)
 
 • Set up a Grafana dashboard to display various metrics related to the web application.
 • Metrics include successful and failed requests, total requests, and request response times.
